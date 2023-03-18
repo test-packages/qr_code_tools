@@ -74,7 +74,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _getPhotoByGallery() {
-    Stream.fromFuture(picker.getImage(source: ImageSource.gallery))
+    Stream.fromFuture(picker.pickImage(source: ImageSource.gallery))
         .flatMap((file) {
       setState(() {
         _qrcodeFile = file.path;
